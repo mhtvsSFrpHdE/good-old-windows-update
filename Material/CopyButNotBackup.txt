@@ -1,0 +1,5 @@
+@REM The one can't use as a backup, you're not safe to modify task content or delete.
+chcp 65001
+cd /d %~dp0
+schtasks.exe /query /xml /tn "\Microsoft\Windows\WindowsUpdate\Scheduled Start" > "Scheduled Start.xml"
+schtasks.exe /query /xml /tn "\Microsoft\Windows\WindowsUpdate\sihpostreboot" > "sihpostreboot.xml"

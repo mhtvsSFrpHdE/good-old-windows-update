@@ -1,0 +1,2 @@
+@REM Get all as json, locate which appx to be uninstalled
+Get-AppxPackage | Select Name,PackageFullName | Sort-Object Name | ConvertTo-Json | Out-File "AllAppx.txt"

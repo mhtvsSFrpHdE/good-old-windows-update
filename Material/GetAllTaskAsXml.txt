@@ -1,0 +1,2 @@
+@REM Get all as xml, locate which task will call wuauserv
+schtasks.exe /query /xml > all.txt
