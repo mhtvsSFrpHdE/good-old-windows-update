@@ -13,7 +13,7 @@ And how to revert back. Which is most other similar software don't.
 
 ## How to use
 
-Check the wiki page before run any script.  
+Check the [wiki page](https://github.com/mhtvsSFrpHdE/good-old-windows-update/wiki/PowerShell-script) before run any script.  
 Some of them are one-way, you need to handle the backup manually if necessary,  
 or reinstall related software to recover.
 
