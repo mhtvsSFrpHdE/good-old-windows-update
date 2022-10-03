@@ -1,15 +1,15 @@
 # Stop at first error
 $global:ErrorActionPreference = "Stop"
 
-# Init cstpw
-$global:CSTPW_SCRIPT_FILE = ".\cstpw.cmd"
-. .\cstpw.ps1
-Cstpw_CreateScript
-
 # Open setting
-Cstpw_WriteScript 'explorer ms-settings:windowsupdate'
-Cstpw_RunScript -Wait
+Start-Process explorer -ArgumentList "ms-settings:windowsupdate"
+
+Write-Host "Wait for a while to finish update"
+Read-Host "Press Enter to continue disable Windows update service..."
 
 # Run disable update
 $disableScriptPath = "`"$($PSScriptRoot)\Wu_Disable.ps1`""
-Start-Process powershell -ArgumentList "-File", $($disableScriptPath), "-Wait", "-NoExit" -Verb RunAs
+Start-Process powershell -ArgumentList "-File", $($disableScriptPath) -Verb RunAs
+
+Write-Host "Windows update service should disabled"
+Read-Host "It is now safe to turn off this window."
