@@ -8,7 +8,7 @@ Write-Host "Wait for a while to finish update"
 Read-Host "Press Enter to continue disable Windows update service..."
 
 # Run disable update
-$disableScriptPath = "`"$($PSScriptRoot)\Wu_Disable.ps1`""
+$disableScriptPath = "`"$($PSScriptRoot)\WuTask_Disable.ps1`""
 Start-Process powershell -ArgumentList "-File", $($disableScriptPath) -Verb RunAs
 
 Write-Host "Windows update service should disabled"

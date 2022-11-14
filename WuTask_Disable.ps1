@@ -1,5 +1,10 @@
+# Disable Update service and Task
+
 # Stop at first error
 $global:ErrorActionPreference = "Stop"
+
+# Go to script folder
+cd $PSScriptRoot
 
 # Init cstpw
 $global:CSTPW_SCRIPT_FILE = ".\cstpw.cmd"
